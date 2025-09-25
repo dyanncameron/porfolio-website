@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Dyann Cameron — Projects Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b1020;
+    --card:#121a2f;
+    --muted:#9aa3b2;
+    --text:#e8edf7;
+    --accent:#7dd3fc;
+    --accent-2:#22c55e;
+    --border:#1f2942;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
+  a{color:var(--accent)}
+  .wrap{max-width:1000px;margin:0 auto;padding:40px 20px 80px}
+  header{display:flex;flex-wrap:wrap;gap:16px;align-items:baseline;margin-bottom:28px;border-bottom:1px solid var(--border);padding-bottom:16px}
+  h1{font-size:clamp(24px,4vw,36px);margin:0;font-weight:800;letter-spacing:0.2px}
+  .subtitle{color:var(--muted)}
+  .meta{margin-left:auto;display:flex;gap:18px;flex-wrap:wrap}
+  .badge{background:rgba(125,211,252,.12);border:1px solid var(--border);padding:6px 10px;border-radius:999px;font-size:12px;color:#c8eefc}
+  section{margin:32px 0}
+  h2{font-size:22px;margin:0 0 12px 0}
+  p{margin:8px 0}
+
+  .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+  .card{grid-column:span 12;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px;box-shadow:0 4px 24px rgba(0,0,0,.14)}
+  @media(min-width:720px){.card.half{grid-column:span 6}}
+
+  .proj{display:flex;flex-direction:column;gap:8px}
+  .proj header{border:0;padding:0;margin:0;display:flex;gap:10px;align-items:center}
+  .proj-title{font-size:18px;font-weight:700;margin:0}
+  .tags{display:flex;gap:6px;flex-wrap:wrap}
+  .tag{font-size:11px;border:1px solid var(--border);padding:2px 8px;border-radius:999px;color:var(--muted)}
+  .links a{margin-right:12px;text-decoration:none}
+  .links a:hover{text-decoration:underline}
+
+  .skills ul{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:8px 0 0 0;list-style:none}
+  .skills li{border:1px solid var(--border);padding:6px 10px;border-radius:10px;color:var(--muted);font-size:13px}
+
+  footer{margin-top:36px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+  .btnbar{display:flex;gap:10px;margin-top:8px}
+  .btn{display:inline-block;border:1px solid var(--border);background:#0f172a; color:var(--text); padding:8px 12px;border-radius:10px; text-decoration:none; font-size:13px}
+  .btn.primary{background:linear-gradient(135deg, var(--accent), var(--accent-2));color:#0b1020;font-weight:700}
+
+  /* Print styles for easy “Save as PDF” */
+  @media print{
+    .btnbar,.badge,.meta{display:none !important}
+    body{background:#fff;color:#000}
+    .card{box-shadow:none;border:1px solid #e5e7eb;background:#fff}
+    a{color:#0366d6}
+  }
+</style>
+<script>
+  function downloadPDFTip(){ alert('Tip: Use your browser’s Print dialog (Cmd/Ctrl + P) and choose “Save as PDF” for a polished PDF export.'); }
+</script>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Dyann Cameron</h1>
+        <div class="subtitle">Junior Web Developer • UX/UI Student (Mission Ready HQ)</div>
+      </div>
+      <div class="meta">
+        <span class="badge">Auckland, NZ</span>
+        <span class="badge">NZ Permanent Resident</span>
+        <span class="badge">Updated 2025-09-25</span>
+      </div>
+    </header>
+
+    <div class="btnbar">
+      <a class="btn primary" href="#projects">View Projects</a>
+      <a class="btn" href="mailto:dyanncameron@gmail.com">Email</a>
+      <a class="btn" href="#" onclick="downloadPDFTip();return false;">Save as PDF</a>
+    </div>
+
+    <section class="about card">
+      <h2>About</h2>
+      <p>I turn ideas into simple, working web experiences. I’m early in my career, comfortable with HTML/CSS/JavaScript, React basics, APIs, Firebase/Firestore, and WordPress (Elementor + light PHP). I care about readable code, helpful documentation, and collaborating well with teammates.</p>
+    </section>
+
+    <section class="skills card">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML/CSS/JS</li>
+        <li>React (basics)</li>
+        <li>APIs / REST / JSON</li>
+        <li>Firebase / Firestore</li>
+        <li>WordPress + Elementor</li>
+        <li>PHP (edits), Symfony (exposure), Laravel (coursework)</li>
+        <li>Git / GitHub</li>
+        <li>Accessibility & responsive UI</li>
+        <li>Netlify deployment</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <div class="grid">
+        <div class="card proj">
+          <header>
+            <h3 class="proj-title">Fitness Challenge Tracker</h3>
+          </header>
+          <div class="tags">
+            <span class="tag">Firebase</span><span class="tag">Firestore</span>
+            <span class="tag">HTML/CSS/JS</span><span class="tag">Netlify</span>
+          </div>
+          <p>Live web app that tracks workouts and weights with a simple leaderboard. Built with Firebase/Firestore. Focused on clean UI, form validation, and real‑time updates.</p>
+          <div class="links">
+            <a href="#" title="Replace with live demo URL">Live Demo</a>
+            <a href="#" title="Replace with GitHub repo URL">GitHub</a>
+            <a href="#" title="Short write‑up">Case Study</a>
+          </div>
+        </div>
+
+        <div class="card proj">
+          <header>
+            <h3 class="proj-title">FixIt — Civic Reporting Prototype</h3>
+          </header>
+          <div class="tags">
+            <span class="tag">Leaflet</span><span class="tag">Geolocation API</span>
+            <span class="tag">UX Prototype</span>
+          </div>
+          <p>Prototype that lets users pin issues on a map, attach photos, and submit reports. Includes location prompts and micro‑interactions for clarity.</p>
+          <div class="links">
+            <a href="#" title="Figma or live link">Prototype</a>
+            <a href="#" title="Replace with GitHub link">GitHub</a>
+            <a href="#" title="Short write‑up">Case Study</a>
+          </div>
+        </div>
+
+        <div class="card proj">
+          <header>
+            <h3 class="proj-title">WordPress Showcase (Practice Builds)</h3>
+          </header>
+          <div class="tags">
+            <span class="tag">WordPress</span><span class="tag">Elementor</span>
+            <span class="tag">Yoast SEO</span><span class="tag">PHP (light edits)</span>
+          </div>
+          <p>Theme customization, plugin setup, and small PHP tweaks (templates, functions.php) to meet design and content needs. Demonstrates site setup and maintenance fundamentals.</p>
+          <div class="links">
+            <a href="#" title="Portfolio page with screenshots">Portfolio Page</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Contact</h2>
+      <p><strong>Email:</strong> <a href="mailto:dyanncameron@gmail.com">dyanncameron@gmail.com</a> &nbsp;•&nbsp;
+      <strong>Phone:</strong> 022 034 5172 &nbsp;•&nbsp;
+      <strong>Location:</strong> Auckland, NZ</p>
+      <p><strong>Links:</strong> 
+        <a href="#" title="Replace with your GitHub">GitHub</a> · 
+        <a href="#" title="Replace with your LinkedIn">LinkedIn</a> · 
+        <a href="#" title="Replace with your main portfolio">Portfolio</a>
+      </p>
+    </section>
+
+    <footer>
+      <div>© 2025 Dyann Cameron — Portfolio</div>
+      <div>Tip: Use <em>Print → Save as PDF</em> for a polished PDF.</div>
+    </footer>
+  </div>
+</body>
+</html>
